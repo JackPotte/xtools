@@ -1,0 +1,12 @@
+0.0   start
+0.0   initialchecks
+0.0   editcount
+0.0   accountage
+0.5   blockcount2
+0.5   userrights
+0.5   userpage
+0.5   editsummaries
+0.5   activity
+0.5   namespaces
+0.5   articlescreated
+0.5   aivrppafd

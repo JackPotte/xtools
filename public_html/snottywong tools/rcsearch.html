@@ -1,0 +1,41 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>RecentChanges search</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+</HEAD> 
+<BODY id="yes">
+<script type="text/javascript" src="menubar.js"></script>
+<br>
+<div style="width:875px;" id="globalWrapper">
+<h1>Recent Changes Search</h1>
+<div style="width:875px;">This tool allows for arbitrary searches through the recent changes table.  All search parameters are optional, and you can use as many parameters as you like.  Any parameters left blank will not be used.</div>
+<br />
+<form action="cgi-bin/rcsearch.cgi" method="get"> 
+Only show edits that <select name="ucomp"><option value="1">were made by</option><option value="0">were not made by</option></select> User:<input type="text" name="u" size="20" /><br />
+Only show edits to this page: <input type="text" name="t" size="40" /> <input type="checkbox" name="tw" value="1" />Interpret * as a wildcard character<br />
+Only show edits whose timestamp <select name="tscomp"><option value="0">is greater than (newer than)</option><option value="1">is less than (older than)</option><option value="2">is equal to</option></select> <input type="text" name="ts" size="14" /> (YYYYMMDDHHMMSS)<br />
+Only show edits whose edit summaries <select name="escomp"><option value="0">contain</option><option value="1">exactly equal</option><option value="2">do not contain</option></select> the text: <input type="text" name="es" size="25" /> <input type="checkbox" name="esw" value="1" />Interpret * as a wildcard character<br />
+Only show edits which changed the page size by <select name="sizecomp"><option value="0">more than</option><option value="1">less than</option><option value="2">exactly</option></select> <input type="text" name="size" size="8" /> bytes  <input type="checkbox" name="sizeabs" value="1" />Absolute value (disregard positive/negative)<br />
+Show edits made by <select name="usertype"><option value="0">all user types</option><option value="1">only logged-in editors</option><option value="2">only anonymous editors</option></select><br /><br />
+<input type="checkbox" name="m" value="1" />Only show minor edits<br />
+<input type="checkbox" name="b" value="1" />Only show bot edits<br />
+<input type="checkbox" name="n" value="1" />Only show edits that created a new page<br /><br />
+Show a maximum of <input type="text" name="max" maxlength="3" size="5" value="100" /> edits<br />
+<input type="checkbox" name="rev" value="1" />Show edits in reverse order (oldest first)<br />
+<br />
+<input type="submit" value="Submit" />
+</form>
+<br /><br />
+<small>Hints:<br />
+<ul>
+<li>When using wildcards in a page title, you cannot use a wildcard in the namespace portion of the title.</li>
+<li>When specifying timestamps, you can use incomplete timestamps (e.g. 20120506, 201209, 201212251237).  A minimum of 4 digits must be used.</li>
+<li>A maximum of 500 edits can be shown at one time.</li>
+<li>If the search is taking a long time, it might mean that there are few or no edits that match your parameters.</li>
+</ul>
+
+</div>
+</BODY>
+</HTML>

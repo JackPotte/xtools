@@ -1,0 +1,81 @@
+/* Greyscale
+Table Design by Scott Boyle, Two Plus Four
+www.twoplusfour.co.uk
+----------------------------------------------- */
+
+table {border-collapse: collapse;
+border: 2px solid #000;
+font: normal 80%/140% arial, helvetica, sans-serif;
+color: #555;
+background: #fff;}
+
+.matrix {table-layout:fixed;}
+
+td, th {border: 1px dotted #bbb;
+padding: .25em;}
+
+caption {padding: 0 0 .5em 0;
+text-align: left;
+font-size: 1.4em;
+font-weight: bold;
+text-transform: uppercase;
+color: #333;
+background: transparent;}
+
+/* =links
+----------------------------------------------- */
+
+table a {padding: 1px;
+text-decoration: none;
+font-weight: bold;
+background: transparent;}
+
+table a:link {border-bottom: 1px dashed #ddd;
+color: #000;}
+
+table a:visited {border-bottom: 1px dashed #ccc;
+text-decoration: line-through;
+color: #808080;}
+
+table a:hover {border-bottom: 1px dashed #bbb;
+color: #666;}
+
+/* =head =foot
+----------------------------------------------- */
+
+thead th, tfoot th {border: 2px solid #000;
+text-align: center;
+font-size: 1.2em;
+font-weight: bold;
+color: #333;
+background: transparent;}
+
+tfoot td {border: 2px solid #000;}
+
+/* =body
+----------------------------------------------- */
+
+tbody th {border: 2px solid #000;
+text-align: center;
+font-size: 1.2em;
+font-weight: bold;
+color: #333;
+background: transparent;
+white-space: nowrap;}
+
+tbody td {vertical-align: center;
+text-align: left;}
+
+.odd {background: #fcfcfc;}
+td.y {background: #99ff99;}
+td.n {background: #ff9999;}
+td.m {background: #ffff99;}
+td.yy {background: #99ff99; width:1em; height:1em; text-align:center;}
+td.nn {background: #ff9999; width:1em; height:1em; text-align:center;}
+td.mm {background: #ffff99; width:1em; height:1em; text-align:center;}
+td.yyy {background: #b7e0b7; width:1em; height:1em; text-align:center;}
+td.nnn {background: #e0b7b7; width:1em; height:1em; text-align:center;}
+td.mmm {background: #e0e0b7; width:1em; height:1em; text-align:center;}
+td.c {text-align: center;}
+
+tbody tr:hover {background: #fafafa;}

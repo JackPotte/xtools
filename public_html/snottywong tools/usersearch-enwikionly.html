@@ -1,0 +1,36 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>User contribution search</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="qload-es.js"></script>
+</HEAD> 
+<BODY id="yes" onload="initForm();">
+<script type="text/javascript" src="menubar.js"></script><br>
+<div style="width:875px;" id="globalWrapper">
+<h1>User Contribution Search</h1>
+<div style="width:875px;">This tool will search through a page's history and return edits made by a particular user on that page.<br><br>
+Expand the &quot;Help &amp; Tips&quot; section at the bottom of this page for help with using this tool effectively.<br>
+</div>
+<br>
+<form id="myform" action="cgi-bin/usersearch.cgi" method="get"> 
+Username: <input type="text" name="name" /><br> 
+Page: <input type="text" name="page" size="50" /><br>
+Max number of edits to return:<input type="text" name="max" maxlength="3" size="5" /> (maximum is 500)<br>
+<input type="checkbox" name="noredirect" value="true" />Don't resolve redirects<br>
+<input type="checkbox" name="wildcards" value="true" />Allow wildcards in page title (*)<br>
+<input type="checkbox" name="casesensitive" value="true" />Page title is case sensitive (only applies when wildcards are used)<br><br>
+<input type="submit" value="Submit" /> 
+</form>
+<br><a href="javascript:;" onmousedown="if(document.getElementById('helpdiv').style.display == 'none'){ document.getElementById('helpdiv').style.display = 'block'; }else{ document.getElementById('helpdiv').style.display = 'none'; }">Help &amp; Tips &darr;</a>
+<div id="helpdiv" style="display:none">
+<ul>
+<li><b>Don't resolve redirects</b> &mdash; Normally, the tool will try to resolve redirects, so if you use &quot;WP:ANI&quot; for the page name, it will resolve it to &quot;Wikipedia:Administrators' noticeboard/Incidents&quot;.  However, in the rare case that you want to list a user's contributions to a page that is currently a redirect, check this checkbox.</li>
+<li><b>Allow wildcards in page title</b> &mdash; To search through a range of pages, use asterisks in the page name for wildcards.  Note that wildcards do not work in the namespace, so &quot;User*:Snottywong&quot; won't return edits from &quot;User:Snottywong&quot; and &quot;User talk:Snottywong&quot;.  Use wildcards only after the colon.</li>
+<li><b>Page title is case sensitive</b> &mdash; When wildcards are enabled, the pages search is not case sensitive unless this checkbox is checked.  This option has no effect when wildcards are not enabled.</li>
+</ul>
+</div>
+</div>
+</BODY>
+</HTML>

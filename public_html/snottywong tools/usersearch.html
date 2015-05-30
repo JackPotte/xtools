@@ -1,0 +1,336 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>User contribution search</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="qload-es.js"></script>
+</HEAD> 
+<BODY id="yes" onload="initForm();">
+<script type="text/javascript" src="menubar.js"></script><br>
+<div style="width:875px;" id="globalWrapper">
+<h1>User Contribution Search</h1>
+<div style="width:875px;">This tool will search through a page's history and return edits made by a particular user on that page.<br><br>
+Expand the &quot;Help &amp; Tips&quot; section at the bottom of this page for help with using this tool effectively.<br>
+</div>
+<br>
+<form id="myform" action="cgi-bin/usersearch.cgi" method="get"> 
+Username: <input type="text" name="name" /><br> 
+Page: <input type="text" name="page" size="50" /><br>
+Database: <select name="server">
+<optgroup label="Popular Wikis">
+<option value="enwiki" selected>enwiki</option>
+<option value="dewiki">dewiki</option>
+<option value="eswiki">eswiki</option>
+<option value="frwiki">frwiki</option>
+<option value="itwiki">itwiki</option>
+<option value="nlwiki">nlwiki</option>
+<option value="jawiki">jawiki</option>
+<option value="plwiki">plwiki</option>
+<option value="ptwiki">ptwiki</option>
+<option value="ruwiki">ruwiki</option>
+<option value="zhwiki">zhwiki</option>
+<option value="commonswiki">commonswiki</option>
+</optgroup>
+<optgroup label="All Wikis">
+<option value="abwiki">abwiki</option>
+<option value="acewiki">acewiki</option>
+<option value="afwiki">afwiki</option>
+<option value="akwiki">akwiki</option>
+<option value="alswiki">alswiki</option>
+<option value="amwiki">amwiki</option>
+<option value="angwiki">angwiki</option>
+<option value="anwiki">anwiki</option>
+<option value="arcwiki">arcwiki</option>
+<option value="arwiki">arwiki</option>
+<option value="arzwiki">arzwiki</option>
+<option value="astwiki">astwiki</option>
+<option value="aswiki">aswiki</option>
+<option value="avwiki">avwiki</option>
+<option value="aywiki">aywiki</option>
+<option value="azwiki">azwiki</option>
+<option value="barwiki">barwiki</option>
+<option value="bat_smgwiki">bat_smgwiki</option>
+<option value="bawiki">bawiki</option>
+<option value="bclwiki">bclwiki</option>
+<option value="be_x_oldwiki">be_x_oldwiki</option>
+<option value="bewiki">bewiki</option>
+<option value="bgwiki">bgwiki</option>
+<option value="bhwiki">bhwiki</option>
+<option value="biwiki">biwiki</option>
+<option value="bjnwiki">bjnwiki</option>
+<option value="bmwiki">bmwiki</option>
+<option value="bnwiki">bnwiki</option>
+<option value="bowiki">bowiki</option>
+<option value="bpywiki">bpywiki</option>
+<option value="brwiki">brwiki</option>
+<option value="bswiki">bswiki</option>
+<option value="bugwiki">bugwiki</option>
+<option value="bxrwiki">bxrwiki</option>
+<option value="cawiki">cawiki</option>
+<option value="cbk_zamwiki">cbk_zamwiki</option>
+<option value="cdowiki">cdowiki</option>
+<option value="cebwiki">cebwiki</option>
+<option value="cewiki">cewiki</option>
+<option value="chrwiki">chrwiki</option>
+<option value="chwiki">chwiki</option>
+<option value="chywiki">chywiki</option>
+<option value="ckbwiki">ckbwiki</option>
+<option value="commonswiki">commonswiki</option>
+<option value="cowiki">cowiki</option>
+<option value="crhwiki">crhwiki</option>
+<option value="crwiki">crwiki</option>
+<option value="csbwiki">csbwiki</option>
+<option value="cswiki">cswiki</option>
+<option value="cuwiki">cuwiki</option>
+<option value="cvwiki">cvwiki</option>
+<option value="cywiki">cywiki</option>
+<option value="dawiki">dawiki</option>
+<option value="dewiki">dewiki</option>
+<option value="diqwiki">diqwiki</option>
+<option value="dsbwiki">dsbwiki</option>
+<option value="dvwiki">dvwiki</option>
+<option value="dzwiki">dzwiki</option>
+<option value="eewiki">eewiki</option>
+<option value="elwiki">elwiki</option>
+<option value="emlwiki">emlwiki</option>
+<option value="enwiki">enwiki</option>
+<option value="eowiki">eowiki</option>
+<option value="eswiki">eswiki</option>
+<option value="etwiki">etwiki</option>
+<option value="euwiki">euwiki</option>
+<option value="extwiki">extwiki</option>
+<option value="fawiki">fawiki</option>
+<option value="ffwiki">ffwiki</option>
+<option value="fiu_vrowiki">fiu_vrowiki</option>
+<option value="fiwiki">fiwiki</option>
+<option value="fjwiki">fjwiki</option>
+<option value="foundationwiki">foundationwiki</option>
+<option value="fowiki">fowiki</option>
+<option value="frpwiki">frpwiki</option>
+<option value="frrwiki">frrwiki</option>
+<option value="frwiki">frwiki</option>
+<option value="furwiki">furwiki</option>
+<option value="fywiki">fywiki</option>
+<option value="gagwiki">gagwiki</option>
+<option value="ganwiki">ganwiki</option>
+<option value="gawiki">gawiki</option>
+<option value="gdwiki">gdwiki</option>
+<option value="glkwiki">glkwiki</option>
+<option value="glwiki">glwiki</option>
+<option value="gnwiki">gnwiki</option>
+<option value="gotwiki">gotwiki</option>
+<option value="guwiki">guwiki</option>
+<option value="gvwiki">gvwiki</option>
+<option value="hakwiki">hakwiki</option>
+<option value="hawiki">hawiki</option>
+<option value="hawwiki">hawwiki</option>
+<option value="hewiki">hewiki</option>
+<option value="hifwiki">hifwiki</option>
+<option value="hiwiki">hiwiki</option>
+<option value="hrwiki">hrwiki</option>
+<option value="hsbwiki">hsbwiki</option>
+<option value="htwiki">htwiki</option>
+<option value="huwiki">huwiki</option>
+<option value="hywiki">hywiki</option>
+<option value="iawiki">iawiki</option>
+<option value="idwiki">idwiki</option>
+<option value="iewiki">iewiki</option>
+<option value="igwiki">igwiki</option>
+<option value="ikwiki">ikwiki</option>
+<option value="ilowiki">ilowiki</option>
+<option value="incubatorwiki">incubatorwiki</option>
+<option value="iowiki">iowiki</option>
+<option value="iswiki">iswiki</option>
+<option value="itwiki">itwiki</option>
+<option value="iuwiki">iuwiki</option>
+<option value="jawiki">jawiki</option>
+<option value="jbowiki">jbowiki</option>
+<option value="jvwiki">jvwiki</option>
+<option value="kaawiki">kaawiki</option>
+<option value="kabwiki">kabwiki</option>
+<option value="kawiki">kawiki</option>
+<option value="kbdwiki">kbdwiki</option>
+<option value="kgwiki">kgwiki</option>
+<option value="kiwiki">kiwiki</option>
+<option value="kkwiki">kkwiki</option>
+<option value="klwiki">klwiki</option>
+<option value="kmwiki">kmwiki</option>
+<option value="knwiki">knwiki</option>
+<option value="koiwiki">koiwiki</option>
+<option value="kowiki">kowiki</option>
+<option value="krcwiki">krcwiki</option>
+<option value="kshwiki">kshwiki</option>
+<option value="kswiki">kswiki</option>
+<option value="kuwiki">kuwiki</option>
+<option value="kvwiki">kvwiki</option>
+<option value="kwwiki">kwwiki</option>
+<option value="kywiki">kywiki</option>
+<option value="ladwiki">ladwiki</option>
+<option value="lawiki">lawiki</option>
+<option value="lbewiki">lbewiki</option>
+<option value="lbwiki">lbwiki</option>
+<option value="lgwiki">lgwiki</option>
+<option value="lijwiki">lijwiki</option>
+<option value="liwiki">liwiki</option>
+<option value="lmowiki">lmowiki</option>
+<option value="lnwiki">lnwiki</option>
+<option value="lowiki">lowiki</option>
+<option value="ltgwiki">ltgwiki</option>
+<option value="ltwiki">ltwiki</option>
+<option value="lvwiki">lvwiki</option>
+<option value="map_bmswiki">map_bmswiki</option>
+<option value="mdfwiki">mdfwiki</option>
+<option value="mediawikiwiki">mediawikiwiki</option>
+<option value="metawiki">metawiki</option>
+<option value="mgwiki">mgwiki</option>
+<option value="mhrwiki">mhrwiki</option>
+<option value="miwiki">miwiki</option>
+<option value="mkwiki">mkwiki</option>
+<option value="mlwiki">mlwiki</option>
+<option value="mnwiki">mnwiki</option>
+<option value="mrjwiki">mrjwiki</option>
+<option value="mrwiki">mrwiki</option>
+<option value="mswiki">mswiki</option>
+<option value="mtwiki">mtwiki</option>
+<option value="mwlwiki">mwlwiki</option>
+<option value="myvwiki">myvwiki</option>
+<option value="mywiki">mywiki</option>
+<option value="mznwiki">mznwiki</option>
+<option value="nahwiki">nahwiki</option>
+<option value="napwiki">napwiki</option>
+<option value="nawiki">nawiki</option>
+<option value="nds_nlwiki">nds_nlwiki</option>
+<option value="ndswiki">ndswiki</option>
+<option value="newiki">newiki</option>
+<option value="newwiki">newwiki</option>
+<option value="nlwiki">nlwiki</option>
+<option value="nnwiki">nnwiki</option>
+<option value="novwiki">novwiki</option>
+<option value="nowiki">nowiki</option>
+<option value="nrmwiki">nrmwiki</option>
+<option value="nvwiki">nvwiki</option>
+<option value="nywiki">nywiki</option>
+<option value="ocwiki">ocwiki</option>
+<option value="omwiki">omwiki</option>
+<option value="orwiki">orwiki</option>
+<option value="oswiki">oswiki</option>
+<option value="outreachwiki">outreachwiki</option>
+<option value="pagwiki">pagwiki</option>
+<option value="pamwiki">pamwiki</option>
+<option value="papwiki">papwiki</option>
+<option value="pawiki">pawiki</option>
+<option value="pcdwiki">pcdwiki</option>
+<option value="pdcwiki">pdcwiki</option>
+<option value="pflwiki">pflwiki</option>
+<option value="pihwiki">pihwiki</option>
+<option value="piwiki">piwiki</option>
+<option value="plwiki">plwiki</option>
+<option value="pmswiki">pmswiki</option>
+<option value="pnbwiki">pnbwiki</option>
+<option value="pntwiki">pntwiki</option>
+<option value="pswiki">pswiki</option>
+<option value="ptwiki">ptwiki</option>
+<option value="quwiki">quwiki</option>
+<option value="rmwiki">rmwiki</option>
+<option value="rmywiki">rmywiki</option>
+<option value="rnwiki">rnwiki</option>
+<option value="roa_rupwiki">roa_rupwiki</option>
+<option value="roa_tarawiki">roa_tarawiki</option>
+<option value="rowiki">rowiki</option>
+<option value="ruewiki">ruewiki</option>
+<option value="ruwiki">ruwiki</option>
+<option value="rwwiki">rwwiki</option>
+<option value="sahwiki">sahwiki</option>
+<option value="sawiki">sawiki</option>
+<option value="scnwiki">scnwiki</option>
+<option value="scowiki">scowiki</option>
+<option value="scwiki">scwiki</option>
+<option value="sdwiki">sdwiki</option>
+<option value="sewiki">sewiki</option>
+<option value="sgwiki">sgwiki</option>
+<option value="shwiki">shwiki</option>
+<option value="simplewiki">simplewiki</option>
+<option value="siwiki">siwiki</option>
+<option value="skwiki">skwiki</option>
+<option value="slwiki">slwiki</option>
+<option value="smwiki">smwiki</option>
+<option value="snwiki">snwiki</option>
+<option value="sourceswiki">sourceswiki</option>
+<option value="sowiki">sowiki</option>
+<option value="specieswiki">specieswiki</option>
+<option value="sqwiki">sqwiki</option>
+<option value="srnwiki">srnwiki</option>
+<option value="srwiki">srwiki</option>
+<option value="sswiki">sswiki</option>
+<option value="stqwiki">stqwiki</option>
+<option value="strategywiki">strategywiki</option>
+<option value="stwiki">stwiki</option>
+<option value="suwiki">suwiki</option>
+<option value="svwiki">svwiki</option>
+<option value="swwiki">swwiki</option>
+<option value="szlwiki">szlwiki</option>
+<option value="tawiki">tawiki</option>
+<option value="tenwiki">tenwiki</option>
+<option value="testwiki">testwiki</option>
+<option value="tetwiki">tetwiki</option>
+<option value="tewiki">tewiki</option>
+<option value="tgwiki">tgwiki</option>
+<option value="thwiki">thwiki</option>
+<option value="tiwiki">tiwiki</option>
+<option value="tkwiki">tkwiki</option>
+<option value="tlwiki">tlwiki</option>
+<option value="tnwiki">tnwiki</option>
+<option value="towiki">towiki</option>
+<option value="tpiwiki">tpiwiki</option>
+<option value="trwiki">trwiki</option>
+<option value="tswiki">tswiki</option>
+<option value="ttwiki">ttwiki</option>
+<option value="tumwiki">tumwiki</option>
+<option value="twwiki">twwiki</option>
+<option value="tywiki">tywiki</option>
+<option value="udmwiki">udmwiki</option>
+<option value="ugwiki">ugwiki</option>
+<option value="ukwiki">ukwiki</option>
+<option value="urwiki">urwiki</option>
+<option value="uzwiki">uzwiki</option>
+<option value="vecwiki">vecwiki</option>
+<option value="vewiki">vewiki</option>
+<option value="viwiki">viwiki</option>
+<option value="vlswiki">vlswiki</option>
+<option value="vowiki">vowiki</option>
+<option value="warwiki">warwiki</option>
+<option value="wawiki">wawiki</option>
+<option value="wowiki">wowiki</option>
+<option value="wuuwiki">wuuwiki</option>
+<option value="xalwiki">xalwiki</option>
+<option value="xhwiki">xhwiki</option>
+<option value="xmfwiki">xmfwiki</option>
+<option value="yiwiki">yiwiki</option>
+<option value="yowiki">yowiki</option>
+<option value="zawiki">zawiki</option>
+<option value="zeawiki">zeawiki</option>
+<option value="zh_classicalwiki">zh_classicalwiki</option>
+<option value="zh_min_nanwiki">zh_min_nanwiki</option>
+<option value="zh_yuewiki">zh_yuewiki</option>
+<option value="zhwiki">zhwiki</option>
+<option value="zuwiki">zuwiki</option>
+</optgroup>
+</select><br>
+Max number of edits to return:<input type="text" name="max" maxlength="3" size="5" /> (maximum is 500)<br>
+<input type="checkbox" name="noredirect" value="true" />Don't resolve redirects<br>
+<input type="checkbox" name="wildcards" value="true" />Allow wildcards in page title (*)<br>
+<input type="checkbox" name="casesensitive" value="true" />Page title is case sensitive (only applies when wildcards are used)<br><br>
+<input type="submit" value="Submit" /> 
+</form>
+<br><a href="javascript:;" onmousedown="if(document.getElementById('helpdiv').style.display == 'none'){ document.getElementById('helpdiv').style.display = 'block'; }else{ document.getElementById('helpdiv').style.display = 'none'; }">Help &amp; Tips &darr;</a>
+<div id="helpdiv" style="display:none">
+<ul>
+<li><b>Don't resolve redirects</b> &mdash; Normally, the tool will try to resolve redirects, so if you use &quot;WP:ANI&quot; for the page name, it will resolve it to &quot;Wikipedia:Administrators' noticeboard/Incidents&quot;.  However, in the rare case that you want to list a user's contributions to a page that is currently a redirect, check this checkbox.</li>
+<li><b>Allow wildcards in page title</b> &mdash; To search through a range of pages, use asterisks in the page name for wildcards.  Note that wildcards do not work in the namespace, so &quot;User*:Snottywong&quot; won't return edits from &quot;User:Snottywong&quot; and &quot;User talk:Snottywong&quot;.  Use wildcards only after the colon.</li>
+<li><b>Page title is case sensitive</b> &mdash; When wildcards are enabled, the pages search is not case sensitive unless this checkbox is checked.  This option has no effect when wildcards are not enabled.</li>
+</ul>
+</div>
+</div>
+</BODY>
+</HTML>

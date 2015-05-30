@@ -1,0 +1,36 @@
+<!doctype html>
+<HTML> 
+<HEAD>
+<script type="text/javascript" src="jquery.js"></script>
+<script language="javascript"> 
+<!-- 
+function loadNamespaces(server) {
+	$(function() {
+      $.get("cgi-bin/namespace.cgi?db=enwiki_p", processResults);
+    });
+}
+
+function processResults(results) {
+	var nslist = jQuery.parseJSON(results);
+	var nsselect = document.myform.namespace.options;
+	nsselect.length = 0;
+	for (var i=0;i<nslist.length;i++)
+	{
+		if (nslist[i][1] < 0) continue;
+		if (nslist[i][0] == "") nslist[i][0] = "(Article)";
+		nsselect[nsselect.length] = new Option(nslist[i][0], nslist[i][1]);
+	}
+}
+-->
+</script>
+</HEAD>
+<BODY onload='loadNamespaces("enwiki_p")'>
+
+<div align="left">
+<form name="myform">
+Namespace list
+<select name="namespace">
+<option value="none" selected>Select server first</option>
+</select>
+</BODY>
+</HTML>

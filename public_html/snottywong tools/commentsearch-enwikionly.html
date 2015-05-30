@@ -1,0 +1,55 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>User edit summary search</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="qload.js"></script>
+</HEAD> 
+<BODY id="yes" onload="initForm();">
+<script type="text/javascript" src="menubar.js"></script>
+<br>
+<div style="width:875px;" id="globalWrapper">
+<h1>User Edit Summary Search</h1>
+<div style="width:875px;">This tool will search through a user's edit summaries and return edits with a partial match.  Click on the Advanced Options link to select whether the search includes section headings, whether the search is case sensitive, or to restrict the search to one namespace.</div>
+<br />
+<form id="myform" action="cgi-bin/commentsearch.cgi" method="get"> 
+Username: <input type="text" name="name" /><br /> 
+Search string: <input type="text" name="search" size="50" /><br />
+Max number of edits to return:<input type="text" name="max" maxlength="3" size="5" /> (maximum is 500)<br /><br />
+
+<a href="javascript:;" onmousedown="if(document.getElementById('mydiv').style.display == 'none'){ document.getElementById('mydiv').style.display = 'block'; }else{ document.getElementById('mydiv').style.display = 'none'; }">Advanced options &darr;</a>
+<br><br>
+<div id="mydiv" style="display:none">
+<input type="checkbox" name="nosect" value="1"/>Don't search within /* section headings */<br />
+<input type="checkbox" name="casesensitive" value="1"/>Case sensitive search<br />
+Restrict search to namespace: <select name="ns">
+<option value="none">All namespaces</option>
+<option value="0">(Article)</option>
+<option value="1">Talk</option>
+<option value="2">User</option>
+<option value="3">User talk</option>
+<option value="4">Wikipedia</option>
+<option value="5">Wikipedia talk</option>
+<option value="6">File</option>
+<option value="7">File talk</option>
+<option value="8">MediaWiki</option>
+<option value="9">MediaWiki talk</option>
+<option value="10">Template</option>
+<option value="11">Template talk</option>
+<option value="12">Help</option>
+<option value="13">Help talk</option>
+<option value="14">Category</option>
+<option value="15">Category talk</option>
+<option value="100">Portal</option>
+<option value="101">Portal talk</option>
+<option value="108">Book</option>
+<option value="109">Book talk</option>
+</select>
+</div>
+
+<input type="submit" value="Submit" /> 
+</form>
+</div>
+</BODY>
+</HTML>

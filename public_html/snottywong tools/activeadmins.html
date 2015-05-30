@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<title>Monthly active en-wiki admin count</title>
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = new google.visualization.DataTable();
+data.addColumn('datetime', 'datetime');
+data.addColumn('number', 'Active admins');
+data.addRow([new Date(Date.UTC(2007,9,1)),922]);
+data.addRow([new Date(Date.UTC(2007,10,1)),929]);
+data.addRow([new Date(Date.UTC(2007,11,1)),952]);
+data.addRow([new Date(Date.UTC(2007,12,1)),993]);
+data.addRow([new Date(Date.UTC(2008,1,1)),1011]);
+data.addRow([new Date(Date.UTC(2008,2,1)),1016]);
+data.addRow([new Date(Date.UTC(2008,3,1)),1006]);
+data.addRow([new Date(Date.UTC(2008,4,1)),989]);
+data.addRow([new Date(Date.UTC(2008,5,1)),986]);
+data.addRow([new Date(Date.UTC(2008,6,1)),990]);
+data.addRow([new Date(Date.UTC(2008,7,1)),986]);
+data.addRow([new Date(Date.UTC(2008,8,1)),966]);
+data.addRow([new Date(Date.UTC(2008,9,1)),974]);
+data.addRow([new Date(Date.UTC(2008,10,1)),966]);
+data.addRow([new Date(Date.UTC(2008,11,1)),951]);
+data.addRow([new Date(Date.UTC(2008,12,1)),951]);
+data.addRow([new Date(Date.UTC(2009,1,1)),942]);
+data.addRow([new Date(Date.UTC(2009,2,1)),938]);
+data.addRow([new Date(Date.UTC(2009,3,1)),929]);
+data.addRow([new Date(Date.UTC(2009,4,1)),918]);
+data.addRow([new Date(Date.UTC(2009,5,1)),922]);
+data.addRow([new Date(Date.UTC(2009,6,1)),918]);
+data.addRow([new Date(Date.UTC(2009,7,1)),916]);
+data.addRow([new Date(Date.UTC(2009,8,1)),906]);
+data.addRow([new Date(Date.UTC(2009,9,1)),896]);
+data.addRow([new Date(Date.UTC(2009,10,1)),880]);
+data.addRow([new Date(Date.UTC(2009,11,1)),862]);
+data.addRow([new Date(Date.UTC(2009,12,1)),865]);
+data.addRow([new Date(Date.UTC(2010,1,1)),882]);
+data.addRow([new Date(Date.UTC(2010,2,1)),885]);
+data.addRow([new Date(Date.UTC(2010,3,1)),859]);
+data.addRow([new Date(Date.UTC(2010,4,1)),843]);
+data.addRow([new Date(Date.UTC(2010,5,1)),841]);
+data.addRow([new Date(Date.UTC(2010,6,1)),838]);
+data.addRow([new Date(Date.UTC(2010,7,1)),817]);
+data.addRow([new Date(Date.UTC(2010,8,1)),800]);
+data.addRow([new Date(Date.UTC(2010,9,1)),805]);
+data.addRow([new Date(Date.UTC(2010,10,1)),796]);
+data.addRow([new Date(Date.UTC(2010,11,1)),785]);
+data.addRow([new Date(Date.UTC(2010,12,1)),777]);
+data.addRow([new Date(Date.UTC(2011,1,1)),765]);
+data.addRow([new Date(Date.UTC(2011,2,1)),778]);
+data.addRow([new Date(Date.UTC(2011,3,1)),777]);
+data.addRow([new Date(Date.UTC(2011,4,1)),771]);
+data.addRow([new Date(Date.UTC(2011,5,1)),764]);
+data.addRow([new Date(Date.UTC(2011,6,1)),760]);
+data.addRow([new Date(Date.UTC(2011,7,1)),765]);
+data.addRow([new Date(Date.UTC(2011,8,1)),746]);
+data.addRow([new Date(Date.UTC(2011,9,1)),730]);
+data.addRow([new Date(Date.UTC(2011,10,1)),723]);
+data.addRow([new Date(Date.UTC(2011,11,1)),729]);
+data.addRow([new Date(Date.UTC(2011,12,1)),744]);
+data.addRow([new Date(Date.UTC(2012,1,1)),742]);
+data.addRow([new Date(Date.UTC(2012,2,1)),748]);
+data.addRow([new Date(Date.UTC(2012,3,1)),745]);
+data.addRow([new Date(Date.UTC(2012,4,1)),734]);
+data.addRow([new Date(Date.UTC(2012,5,1)),719]);
+data.addRow([new Date(Date.UTC(2012,6,1)),703]);
+data.addRow([new Date(Date.UTC(2012,7,1)),693]);
+data.addRow([new Date(Date.UTC(2012,8,1)),702]);
+var formatter = new google.visualization.DateFormat({pattern: "MMM yyyy"});
+formatter.format(data,0);
+var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+chart.draw(data, {width: 875, height: 600, wmode: "opaque", title: "Monthly active en-wiki admin count", interpolateNulls: "True", backgroundColor: "#eeeedd", pointSize:0, curveType: "none", hAxis: {slantedText: "False", maxAlternation:1}});
+}
+</script>
+</head>
+<BODY id="no">
+<br>
+<div id="chart_div" style="margin:0;padding:0;position:absolute;top:40;left:0;"></div>
+</body>
+</html>
+

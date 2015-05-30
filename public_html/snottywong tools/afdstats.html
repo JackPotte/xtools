@@ -1,0 +1,29 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>AfD Stats</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+</HEAD> 
+<BODY id="yes">
+<script type="text/javascript" src="menubar.js"></script>
+<br>
+<div style="width:875px;" id="globalWrapper">
+<h1>AfD Statistics Tool</h1>
+<div style="width:875px;">This tool will analyze the AfD voting history of a user and report statistical results.  It is currently in beta and may not be reliable or accurate in all cases, and currently only works for the English Wikipedia.  The tool searches through the wikitext of AfD pages which have been edited by the Username specified below, and attempts to find their vote by searching for their signature on the page.  If the signature of the user doesn't always include their username, then you may need to specify an alternate username so that the tool can identify those votes (e.g. if the user's signature links to a different user page which redirects to their user page).  This is not common and can be left blank in most cases.<br /><br />
+Since computer programs are generally not good at evaluating humanity's intentions through their words, this tool is limited to searching for <b>bolded</b> votes in AfD's.  If the user you are searching for doesn't routinely bold their votes, then this tool will likely not work well.<br /><br />
+You can also specify the maximum number of AfD's to search through (maximum is 250 at this time).  In some cases, the number of AfD's displayed will be less than the maximum number specified.  This can happen when a user edits an AfD page but doesn't vote (e.g. just leaves a comment).<br />
+</div>
+<br />
+<form action="cgi-bin/afdstats.cgi" method="get"> 
+Username: <input type="text" name="name" /> (don't include "User:")<br /> 
+Number of AfD's to analyze:<input type="text" name="max" maxlength="3" size="5" /> (maximum is 250)<br />
+Starting Date: <input type="text" name="startdate" maxlength="8" size="10" /> (leave it blank to start at the most recent AfD, or specify a date in the form YYYYMMDD to search from that date and earlier)<br />
+
+Alternate name: <input type="text" name="altname" /> (if the signature used on AfD's doesn't include the username specified above, specify the alternate username used in the signature here)<br />
+<input type="checkbox" name="nomsonly" value="true" /> Only show AfD's that were nominated by this user<br /><br />
+<input type="submit" value="Submit" /> 
+</form>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>Admin score</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="qload.js"></script>
+</HEAD> 
+<BODY id="yes" onload="initForm();">
+<script type="text/javascript" src="menubar.js"></script>
+<br>
+<div style="width:875px;" id="globalWrapper">
+<h1>Admin Score</h1>
+<div style="width:875px;">This tool grabs pertinent information about a user and generates an overall score designed to indicate that user's readiness for adminship. There are several important aspects of a user's contributions that this tool definitely does <b>not</b> look for, including but not limited to:<br>
+<ul>
+<li>Whether the user is civil and polite</li>
+<li>Perceived maturity and intelligence levels of the user</li>
+<li>Whether the user has received recent user talk page warnings for vandalism, edit warring, incivility etc.</li>
+<li>User's understanding of Wikipedia policies and guidelines</li>
+<li>Whether any blocks received by the user were deserved</li>
+</ul><br />
+<b>At this point, there is no threshold score over which an editor would be considered a good candidate for adminship.  The scoring has been redesigned such that the <u>maximum score possible</u> is 1000.  Even if a user scores a perfect score of 1000, he/she may not necessarily be a suitable admin candidate for other reasons.</b>
+<br /><br />Scores over 500 are generally regarded as good.  Regardless of an editor's overall score, significantly negative scores in any category may adversely affect their ability to successfully pass an RfA.  This tool should not be used as a substitute for detailed vetting of a user's contributions prior to voting at their RfA.
+</div>
+<br />
+<form id="myform" action="cgi-bin/adminscore.cgi" method="get"> 
+Username: <input type="text" name="name" /><br /><br />
+<input type="submit" value="Submit" /> 
+<br /><small>Please be patient.  This tool pulls a lot of information about a user, and can sometimes take several minutes to retrieve all of this information, particularly for users with very high edit counts.</small>
+</form>
+</div>
+</BODY>
+</HTML>

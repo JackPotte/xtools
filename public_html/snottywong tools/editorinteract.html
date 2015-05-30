@@ -1,0 +1,65 @@
+<!doctype html> 
+<HTML> 
+<HEAD> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<TITLE>Editor Interaction Analyzer</TITLE> 
+<LINK href="menubar3.css" rel="stylesheet" type="text/css">
+</HEAD> 
+<BODY id="yes">
+<script type="text/javascript" src="menubar.js"></script><br>
+<div style="width:875px;" id="globalWrapper">
+<h1>Editor Interaction Analyzer</h1>
+<div style="width:875px;">This tool shows the common pages that multiple editors have both edited, sorted by minimum time between edits by any of the users.  In other words, if two editors made an edit to the same page within a short time, that page will show up towards the top of the table.  In general, when two users edit a page within a short time, chances are high that they have interacted directly with one another on that page.  Click on the &quot;timeline&quot; link to see the edits that all users have made to the page in chronological order.<br />
+</div>
+<br />
+<form action="cgi-bin/editorinteract.cgi" method="get"> 
+User 1: <input type="text" name="user1" /> (don't include "User:")<br /> 
+User 2: <input type="text" name="user2" /> <br />
+User 3: <input type="text" name="user3" /> <br /> 
+User 4: <input type="text" name="user4" /> <br />
+User 5: <input type="text" name="user5" /> <br />
+User 6: <input type="text" name="user6" /> <br />
+User 7: <input type="text" name="user7" /> <br />
+User 8: <input type="text" name="user8" /> <br />
+User 9: <input type="text" name="user9" /> <br />
+User 10: <input type="text" name="user10" /> <br />
+<br />
+Restrict search to namespace: <select name="ns">
+<option value="none">All namespaces</option>
+<option value="0">(Article)</option>
+<option value="1">Talk</option>
+<option value="2">User</option>
+<option value="3">User talk</option>
+<option value="4">Wikipedia</option>
+<option value="5">Wikipedia talk</option>
+<option value="6">File</option>
+<option value="7">File talk</option>
+<option value="8">MediaWiki</option>
+<option value="9">MediaWiki talk</option>
+<option value="10">Template</option>
+<option value="11">Template talk</option>
+<option value="12">Help</option>
+<option value="13">Help talk</option>
+<option value="14">Category</option>
+<option value="15">Category talk</option>
+<option value="100">Portal</option>
+<option value="101">Portal talk</option>
+<option value="108">Book</option>
+<option value="109">Book talk</option>
+<option value="446">Education Program</option>
+<option value="447">Education Program talk</option>
+<option value="710">TimedText</option>
+<option value="711">TimedText talk</option>
+<option value="828">Module</option>
+<option value="829">Module talk</option>
+</select>
+<br />
+Starting date: <input type="text" name="startdate" maxlength="8" size="10" /> (in YYYYMMDD format, leave either or both blank for no date restrictions)<br />
+Ending date: <input type="text" name="enddate" maxlength="8" size="10" /><br />
+<input type="checkbox" name="allusers" value="true" /> Only show pages that all users have edited at least once<br />
+<br />
+<input type="submit" value="Submit" /> 
+</form>
+</div>
+</BODY>
+</HTML>
